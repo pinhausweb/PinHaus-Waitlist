@@ -43,7 +43,7 @@ export default function WaitlistPage() {
         this.y = y
         this.radius = 0
         this.maxRadius = 300
-        this.speed = 4
+        this.speed = 2.6
         this.alpha = 1
       }
 

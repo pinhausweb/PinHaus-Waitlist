@@ -47,7 +47,7 @@ export default function WaitlistPage() {
         this.radius = 0
         // Random max radius between 70% and 140% of base 300
         this.maxRadius = 300 * (0.7 + Math.random() * 0.7) // 210 to 420
-        this.speed = 4
+        this.speed = 2.6
         this.alpha = 1
       }
 

@@ -325,11 +325,11 @@ export default function WaitlistPage() {
   }
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className={`min-h-screen relative overflow-hidden ${isSuccess ? 'bg-white' : 'bg-black'}`}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 cursor-grab active:cursor-grabbing"
-        style={{ background: "#ffffff" }}
+        style={{ background: isSuccess ? "#ffffff" : "#000000" }}
       />
 
       {/* Email form overlay */}

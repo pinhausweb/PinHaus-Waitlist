@@ -86,5 +86,26 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: #000000;
+  }
+  
+  html {
+    background-color: #000000;
+  }
+  
+  /* Ensure all pages have black background */
+  #__next {
+    background-color: #000000;
+  }
+  
+  /* Allow white background for success state */
+  .bg-white {
+    background-color: #ffffff !important;
+  }
+  
+  .bg-white html,
+  .bg-white body,
+  .bg-white #__next {
+    background-color: #ffffff !important;
   }
 }

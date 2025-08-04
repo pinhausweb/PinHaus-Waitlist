@@ -16,10 +16,10 @@ export default function Home() {
         </video>
 
         {/* Content */}
-        <h1 className="text-[12vw] font-bold tracking-tighter z-10 relative">PINHAUS</h1>
+        <h1 className="text-[12vw] md:text-[12vw] text-[16.8vw] font-bold tracking-tighter z-10 relative">PINHAUS</h1>
         <Link
           href="/waitlist"
-          className="mt-8 px-8 py-3 text-light-gray bg-transparent hover:bg-light-beige/20 transition-all cursor-pointer border border-light-gray/30 z-10 relative"
+          className="mt-4 md:mt-8 px-6 md:px-8 py-2 md:py-3 text-sm md:text-base text-light-gray bg-transparent hover:bg-light-beige/20 transition-all cursor-pointer border border-light-gray/30 z-10 relative"
         >
           Join Waitlist
         </Link>

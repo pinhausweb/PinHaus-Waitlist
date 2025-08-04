@@ -500,6 +500,25 @@ export default function WaitlistPage() {
         .animate-blackStayThenFade {
           animation: blackStayThenFade 1.1s ease-in-out forwards;
         }
+
+        /* Mobile keyboard fixes */
+        @media screen and (max-width: 768px) {
+          .min-h-screen {
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+          }
+          
+          /* Prevent white space when keyboard appears */
+          input[type="email"] {
+            font-size: 16px; /* Prevents zoom on iOS */
+          }
+          
+          /* Ensure form stays centered even with keyboard */
+          .absolute.inset-0.flex.items-center.justify-center {
+            align-items: flex-start;
+            padding-top: 20vh;
+          }
+        }
       `}</style>
     </div>
   )

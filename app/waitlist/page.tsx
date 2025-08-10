@@ -442,11 +442,13 @@ export default function WaitlistPage() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-4 bg-transparent border border-white text-white placeholder:text-white focus:outline-none focus:border-white/80"
+                className="w-full p-4 bg-transparent border-b-2 border-white text-white placeholder:text-white focus:outline-none focus:border-white/80"
                 style={{
                   color: "#FFFFFF",
                   backgroundColor: "transparent",
-                  borderWidth: "1px",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
                 }}
                 required
                 disabled={isSubmitting}
@@ -454,21 +456,25 @@ export default function WaitlistPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full p-4 text-white font-semibold transition-all duration-300 relative overflow-hidden disabled:opacity-50"
+                className="w-full p-4 font-bold transition-all duration-300 relative overflow-hidden disabled:opacity-50 text-2xl"
                 style={{
-                  background:
-                    "linear-gradient(135deg, rgb(245, 245, 250) 0%, rgb(160, 160, 190) 25%, rgb(100, 100, 130) 50%, rgb(220, 220, 240) 100%)",
-                  boxShadow: "0 4px 15px rgba(160, 160, 190, 0.4)",
+                  background: "transparent",
+                  border: "2px solid transparent",
                 }}
               >
-                <div
-                  className="absolute inset-0"
+                <span 
+                  className="relative z-10"
                   style={{
-                    background:
-                      "radial-gradient(ellipse at center, rgba(80, 80, 110, 0.6) 0%, rgba(80, 80, 110, 0) 70%)",
+                    background: "linear-gradient(135deg, rgb(245, 245, 250) 0%, rgb(160, 160, 190) 25%, rgb(100, 100, 130) 50%, rgb(220, 220, 240) 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    fontSize: "1.5rem",
+                    fontWeight: "bold",
                   }}
-                />
-                <span className="relative z-10">{isSubmitting ? "Joining..." : "Join Now"}</span>
+                >
+                  {isSubmitting ? "Joining..." : "JOIN NOW"}
+                </span>
               </button>
             </form>
           ) : (

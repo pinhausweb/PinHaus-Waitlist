@@ -348,14 +348,35 @@ export default function WaitlistPage() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 border border-medium-brown text-dark-brown placeholder:text-medium-brown/50 focus:outline-none focus:border-dark-brown rounded"
+              className="w-full p-4 bg-transparent border-b-2 border-dark-brown text-dark-brown placeholder:text-medium-brown/50 focus:outline-none focus:border-dark-brown"
+              style={{
+                borderTop: "none",
+                borderLeft: "none",
+                borderRight: "none",
+              }}
               required
             />
             <button
               type="submit"
-              className="w-full p-3 bg-dark-brown text-light-gray hover:bg-medium-brown transition-colors cursor-pointer rounded"
+              className="w-full p-4 font-bold transition-all duration-300 relative overflow-hidden text-2xl"
+              style={{
+                background: "transparent",
+                border: "2px solid transparent",
+              }}
             >
-              Join Now
+              <span 
+                className="relative z-10"
+                style={{
+                  background: "linear-gradient(135deg, rgb(245, 245, 250) 0%, rgb(160, 160, 190) 25%, rgb(100, 100, 130) 50%, rgb(220, 220, 240) 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                }}
+              >
+                JOIN NOW
+              </span>
             </button>
           </form>
         </div>

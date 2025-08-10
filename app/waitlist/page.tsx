@@ -462,6 +462,18 @@ export default function WaitlistPage() {
                   border: "2px solid transparent",
                 }}
               >
+                {/* Corner brackets */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {/* Top-left bracket */}
+                  <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-white"></div>
+                  {/* Top-right bracket */}
+                  <div className="absolute top-0 right-0 w-6 h-6 border-r-2 border-t-2 border-white"></div>
+                  {/* Bottom-left bracket */}
+                  <div className="absolute bottom-0 left-0 w-6 h-6 border-l-2 border-b-2 border-white"></div>
+                  {/* Bottom-right bracket */}
+                  <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-white"></div>
+                </div>
+                
                 <span 
                   className="relative z-10"
                   style={{

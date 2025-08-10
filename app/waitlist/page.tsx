@@ -492,7 +492,7 @@ export default function WaitlistPage() {
           ) : (
             <div className="text-center animate-fadeIn">
               <h1 className="text-4xl font-medium text-black mb-2">YOU'RE IN</h1>
-              <p className="text-gray-600 text-sm">Early access coming soon. We'll email you when it's your turn.</p>
+              <p className="text-gray-600 text-sm">Early access coming soon.</p>
             </div>
           )}
         </div>

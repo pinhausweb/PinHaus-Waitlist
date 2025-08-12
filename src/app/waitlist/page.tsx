@@ -329,10 +329,12 @@ export default function WaitlistPage() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: isSuccess ? 'none' : 'url("/backstage-fashion-bg.jpg")',
+          backgroundImage: isSuccess ? 'url("/Success-Background.jpg")' : 'url("/backstage-fashion-bg.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          imageRendering: 'optimizeSpeed',
+          imageRendering: '-webkit-optimize-contrast',
         }}
       />
       

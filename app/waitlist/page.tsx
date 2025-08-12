@@ -402,10 +402,22 @@ export default function WaitlistPage() {
 
   return (
     <div className={`min-h-screen relative overflow-hidden ${isSuccess ? 'bg-white' : 'bg-black'}`}>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: isSuccess ? 'none' : 'url("/backstage-fashion-bg.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          filter: isSuccess ? 'none' : 'brightness(0.7) contrast(1.2)',
+        }}
+      />
+      
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 cursor-grab active:cursor-grabbing"
-        style={{ background: isSuccess ? "#ffffff" : "#000000" }}
+        className="absolute inset-0 cursor-grab active:cursor-grabbing z-10"
+        style={{ background: isSuccess ? "#ffffff" : "transparent" }}
       />
 
       {/* Back button */}

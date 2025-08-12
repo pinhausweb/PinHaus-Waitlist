@@ -371,7 +371,7 @@ export default function WaitlistPage() {
     try {
       // Send to Google Apps Script (handles both data collection and email)
       await fetch(
-        "https://script.google.com/macros/s/AKfycbyYSgUanxqx6i1LT2yJYVwFZA7u4iwQNU9o7w1k1V6ZPUUXd24CuZUCNx6vgTlkewpD/exec",
+        "https://script.google.com/macros/s/AKfycbwSAnFvqAv8hyIafvBF07AywwK4NztdurWW15FisRO_eTkmc8ZGOWPuzPGLwSox0ycy/exec",
         {
           method: "POST",
           mode: "no-cors",

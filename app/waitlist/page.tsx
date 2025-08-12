@@ -369,6 +369,7 @@ export default function WaitlistPage() {
     setIsSubmitting(true)
 
     try {
+      // Step 1: Send to Google Apps Script (your existing system)
       await fetch(
         "https://script.google.com/macros/s/AKfycbwXyI9w295avM1b4RCR-yN-GGlyZGzDbpuBaNa75w7LIl8RLew4jFpQch2FOI4lqzv_/exec",
         {
@@ -380,6 +381,20 @@ export default function WaitlistPage() {
           body: new URLSearchParams({ email }),
         },
       )
+
+      // Step 2: Send beautiful confirmation email via our new system
+      try {
+        await fetch('/api/waitlist-confirmation', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        })
+      } catch (emailError) {
+        console.error('Error sending confirmation email:', emailError)
+        // Don't fail the whole process if email fails
+      }
 
       // Start transition
       setIsTransitioning(true)

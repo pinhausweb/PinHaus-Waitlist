@@ -164,7 +164,7 @@ export default function WaitlistPage() {
         if (isInverted) {
           ctx.fillStyle = `rgba(255, 255, 255, ${0.3 + this.rippleInfluence * 0.7})`
         } else {
-          ctx.fillStyle = "rgba(0, 0, 0, 0.3)"
+          ctx.fillStyle = "rgba(0, 0, 0, 0)" // Fully transparent when not activated
         }
 
         ctx.font = `${scaledFontSize}px Arial`

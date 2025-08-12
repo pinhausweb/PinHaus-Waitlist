@@ -173,11 +173,11 @@ export default function WaitlistPage() {
             ctx.fillStyle = "rgba(0, 0, 0, 0)" // Invisible on white background
           }
         } else {
-          // Normal state: white background, black text appears in ripples
+          // Normal state: background image, white text appears in ripples
           if (isInverted) {
             ctx.fillStyle = `rgba(255, 255, 255, ${0.3 + this.rippleInfluence * 0.7})`
           } else {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.3)"
+            ctx.fillStyle = "rgba(0, 0, 0, 0)" // Fully transparent when not activated
           }
         }
 

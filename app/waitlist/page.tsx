@@ -406,7 +406,7 @@ export default function WaitlistPage() {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: isSuccess ? 'url("/Success-Background.jpg")' : 'url("/backstage-fashion-bg.jpg")',
+          backgroundImage: isSuccess ? 'url("/Success-Background.jpg")' : 'url("/Backstage-bg.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -420,7 +420,8 @@ export default function WaitlistPage() {
         className="absolute inset-0 cursor-grab active:cursor-grabbing z-10"
         style={{ 
           background: isSuccess ? "#ffffff" : "transparent",
-          touchAction: "none"
+          touchAction: "none",
+          pointerEvents: "auto"
         }}
       />
 
@@ -485,9 +486,9 @@ export default function WaitlistPage() {
               </button>
             </form>
           ) : (
-            <div className="text-center animate-fadeIn relative z-40">
-              <h1 className="text-[10.5vw] md:text-[4.3vw] font-bold tracking-tighter text-black mb-0 whitespace-nowrap">YOU'RE IN</h1>
-              <p className="text-gray-600 text-sm">Early access coming soon.</p>
+            <div className="text-center animate-fadeIn relative z-40 pointer-events-none">
+              <h1 className="text-[10.5vw] md:text-[4.3vw] font-bold tracking-tighter text-black mb-0 whitespace-nowrap pointer-events-auto">YOU'RE IN</h1>
+              <p className="text-gray-600 text-sm pointer-events-auto">Early access coming soon.</p>
             </div>
           )}
         </div>

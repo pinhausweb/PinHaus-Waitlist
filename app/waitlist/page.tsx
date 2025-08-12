@@ -418,7 +418,10 @@ export default function WaitlistPage() {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 cursor-grab active:cursor-grabbing z-10"
-        style={{ background: isSuccess ? "#ffffff" : "transparent" }}
+        style={{ 
+          background: isSuccess ? "#ffffff" : "transparent",
+          touchAction: "none"
+        }}
       />
 
       {/* Email form overlay */}
@@ -483,7 +486,7 @@ export default function WaitlistPage() {
             </form>
           ) : (
             <div className="text-center animate-fadeIn relative z-40">
-              <h1 className="text-[10.5vw] md:text-[4.3vw] font-bold tracking-tighter text-black mb-1 whitespace-nowrap">YOU'RE IN</h1>
+              <h1 className="text-[10.5vw] md:text-[4.3vw] font-bold tracking-tighter text-black mb-0 whitespace-nowrap">YOU'RE IN</h1>
               <p className="text-gray-600 text-sm">Early access coming soon.</p>
             </div>
           )}
@@ -567,6 +570,17 @@ export default function WaitlistPage() {
           /* Ensure success content is interactive on mobile */
           .animate-fadeIn * {
             pointer-events: auto;
+          }
+          
+          /* Canvas mobile touch fixes */
+          canvas {
+            touch-action: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
           }
         }
       `}</style>

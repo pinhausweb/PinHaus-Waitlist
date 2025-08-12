@@ -322,9 +322,8 @@ export default function WaitlistPage() {
         // Success state: fully white background
         canvas.style.backgroundColor = "rgb(255, 255, 255)"
       } else {
-        // Normal state: gray background with ripple inversion
-        const bgGray = Math.floor(backgroundInversion * 255)
-        canvas.style.backgroundColor = `rgb(${bgGray}, ${bgGray}, ${bgGray})`
+        // Normal state: transparent background to show image
+        canvas.style.backgroundColor = "transparent"
       }
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -420,29 +419,8 @@ export default function WaitlistPage() {
         style={{ background: isSuccess ? "#ffffff" : "transparent" }}
       />
 
-      {/* Back button */}
-      <Link
-        href="/"
-        className={`absolute top-6 left-6 z-20 transition-colors duration-1000 pointer-events-auto ${
-          isSuccess ? "text-black hover:text-gray-700" : "text-white hover:text-white/80"
-        }`}
-      >
-        <ChevronLeft size={32} />
-      </Link>
-
-      {/* Black overlay that stays for 0.3s then fades away on success */}
-      {isSuccess && (
-        <div
-          className="absolute inset-0 z-30 animate-blackStayThenFade pointer-events-none"
-          style={{
-            backgroundColor: "#0D0D0D",
-            willChange: "opacity",
-          }}
-        />
-      )}
-
       {/* Email form overlay */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
         <div className="max-w-md w-full mx-4 pointer-events-auto">
           {!isSuccess ? (
             <form
@@ -509,6 +487,29 @@ export default function WaitlistPage() {
           )}
         </div>
       </div>
+
+      {/* Back button */}
+      <Link
+        href="/"
+        className={`absolute top-6 left-6 z-20 transition-colors duration-1000 pointer-events-auto ${
+          isSuccess ? "text-black hover:text-gray-700" : "text-white hover:text-white/80"
+        }`}
+      >
+        <ChevronLeft size={32} />
+      </Link>
+
+      {/* Black overlay that stays for 0.3s then fades away on success */}
+      {isSuccess && (
+        <div
+          className="absolute inset-0 z-30 animate-blackStayThenFade pointer-events-none"
+          style={{
+            backgroundColor: "#0D0D0D",
+            willChange: "opacity",
+          }}
+        />
+      )}
+
+
 
       <style jsx>{`
         @keyframes fadeIn {

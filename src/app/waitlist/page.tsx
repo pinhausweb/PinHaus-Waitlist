@@ -286,9 +286,8 @@ export default function WaitlistPage() {
         backgroundInversion = Math.max(backgroundInversion, influence * 0.5)
       }
 
-      // Set background color
-      const bgGray = Math.floor(backgroundInversion * 255)
-      canvas.style.backgroundColor = `rgb(${bgGray}, ${bgGray}, ${bgGray})`
+      // Set background color - transparent to show image
+      canvas.style.backgroundColor = "transparent"
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 

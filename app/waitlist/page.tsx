@@ -483,7 +483,7 @@ export default function WaitlistPage() {
             </form>
           ) : (
             <div className="text-center animate-fadeIn">
-              <h1 className="text-[6.2vw] md:text-[6.2vw] text-[8.7vw] font-bold tracking-tighter text-black mb-2">YOU'RE IN</h1>
+              <h1 className="text-[10.5vw] md:text-[4.3vw] font-bold tracking-tighter text-black mb-2 whitespace-nowrap">YOU'RE IN</h1>
               <p className="text-gray-600 text-sm">Early access coming soon.</p>
             </div>
           )}
@@ -548,8 +548,18 @@ export default function WaitlistPage() {
           
           /* Ensure form stays centered even with keyboard */
           .absolute.inset-0.flex.items-center.justify-center {
-            align-items: flex-start;
-            padding-top: 20vh;
+            align-items: center;
+            padding-top: 0;
+          }
+          
+          /* Success page centering on mobile */
+          .animate-fadeIn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding-top: 0;
           }
         }
       `}</style>

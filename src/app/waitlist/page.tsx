@@ -324,7 +324,7 @@ export default function WaitlistPage() {
   }
 
   return (
-    <div className={`min-h-screen relative overflow-hidden ${isSuccess ? 'bg-white' : 'bg-black'}`}>
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"

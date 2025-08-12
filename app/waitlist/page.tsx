@@ -319,8 +319,8 @@ export default function WaitlistPage() {
 
       // Set background color
       if (isSuccess) {
-        // Success state: fully white background
-        canvas.style.backgroundColor = "rgb(255, 255, 255)"
+        // Success state: transparent background to show image
+        canvas.style.backgroundColor = "transparent"
       } else {
         // Normal state: transparent background to show image
         canvas.style.backgroundColor = "transparent"
@@ -400,7 +400,7 @@ export default function WaitlistPage() {
   }
 
   return (
-    <div className={`min-h-screen relative overflow-hidden ${isSuccess ? 'bg-white' : 'bg-black'}`}>
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"

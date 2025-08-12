@@ -409,7 +409,6 @@ export default function WaitlistPage() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          filter: isSuccess ? 'none' : 'brightness(0.7) contrast(1.2)',
         }}
       />
       

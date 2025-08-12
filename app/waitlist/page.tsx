@@ -482,8 +482,8 @@ export default function WaitlistPage() {
               </button>
             </form>
           ) : (
-            <div className="text-center animate-fadeIn">
-              <h1 className="text-[10.5vw] md:text-[4.3vw] font-bold tracking-tighter text-black mb-2 whitespace-nowrap">YOU'RE IN</h1>
+            <div className="text-center animate-fadeIn relative z-40">
+              <h1 className="text-[10.5vw] md:text-[4.3vw] font-bold tracking-tighter text-black mb-1 whitespace-nowrap">YOU'RE IN</h1>
               <p className="text-gray-600 text-sm">Early access coming soon.</p>
             </div>
           )}
@@ -560,6 +560,13 @@ export default function WaitlistPage() {
             justify-content: center;
             height: 100vh;
             padding-top: 0;
+            pointer-events: auto;
+            z-index: 40;
+          }
+          
+          /* Ensure success content is interactive on mobile */
+          .animate-fadeIn * {
+            pointer-events: auto;
           }
         }
       `}</style>

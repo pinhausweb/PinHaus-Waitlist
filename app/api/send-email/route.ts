@@ -25,88 +25,50 @@ export async function POST(request: NextRequest) {
           <style>
             body {
               margin: 0;
-              padding: 20px;
+              padding: 0;
               font-family: Arial, sans-serif;
-              background-color: #f4f4f4;
+              background-color: #ffffff;
             }
             .email-container {
               max-width: 600px;
               margin: 0 auto;
               background-color: #ffffff;
-              border-radius: 8px;
-              overflow: hidden;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-            .header {
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              color: white;
-              padding: 30px;
-              text-align: center;
-            }
-            .header h1 {
-              margin: 0;
-              font-size: 28px;
-              font-weight: 300;
-            }
-            .content {
-              padding: 30px;
-              text-align: center;
             }
             .image-container {
-              margin: 20px 0;
+              width: 100%;
+              text-align: center;
             }
             .image-container img {
               max-width: 100%;
               height: auto;
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              display: block;
             }
-            .footer {
-              background-color: #f8f9fa;
+            .website-link-box {
+              background-color: #ffffff;
+              border: 2px solid #000000;
               padding: 20px;
               text-align: center;
-              color: #6c757d;
-              font-size: 14px;
+              margin-top: 0;
             }
-            .cta-button {
-              display: inline-block;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              color: white;
-              padding: 12px 30px;
+            .website-link {
+              color: #000000;
               text-decoration: none;
-              border-radius: 25px;
-              font-weight: 600;
-              margin: 20px 0;
-              transition: transform 0.2s ease;
+              font-size: 18px;
+              font-weight: bold;
+              letter-spacing: 2px;
             }
-            .cta-button:hover {
-              transform: translateY(-2px);
+            .website-link:hover {
+              text-decoration: underline;
             }
           </style>
         </head>
         <body>
           <div class="email-container">
-            <div class="header">
-              <h1>PINHAUS</h1>
-              <p>A Moodboard Marketplace</p>
+            <div class="image-container">
+              <img src="${imageUrl}" alt="${imageAlt || 'PINHAUS - A Moodboard Marketplace'}" />
             </div>
-            <div class="content">
-              <h2>Coming Soon!</h2>
-              <p>Get ready for the future of fashion curation.</p>
-              
-              <div class="image-container">
-                <img src="${imageUrl}" alt="${imageAlt || 'PINHAUS Coming Soon'}" />
-              </div>
-              
-              <p>Join our waitlist to be the first to experience PINHAUS.</p>
-              
-              <a href="https://yourdomain.com/waitlist" class="cta-button">
-                Join Waitlist
-              </a>
-            </div>
-            <div class="footer">
-              <p>&copy; 2024 PINHAUS. All rights reserved.</p>
-              <p>You're receiving this email because you're on our waitlist.</p>
+            <div class="website-link-box">
+              <a href="https://pinhaus.app" class="website-link">PINHAUS.APP</a>
             </div>
           </div>
         </body>

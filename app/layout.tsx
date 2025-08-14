@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+        <link rel="icon" type="image/png" href="/app logo for web.png?quality=50&format=webp" />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
